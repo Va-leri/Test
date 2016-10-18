@@ -146,7 +146,7 @@ article {
 
 .quick-download-block {
 /*	box-sizing: border-box;*/
-	min-width: 368px;
+/*	min-width: 368px;*/
 	margin-left: 0;
 	margin-right: 0;
 	padding-top: 24px;
@@ -737,14 +737,15 @@ article {
 	height: 94px;
 	background: rgba(255, 255, 255, 0.28);
 	top: 22px;
+	left: 50%;
 }
 
 .page-footer::before {
-	left: 35.5%;	
+	transform: translateX(100px);	
 }
 
 .page-footer::after {
-	left: 59.6%;
+	transform: translateX(-180px);
 }
 
 .page-footer section {
@@ -875,12 +876,86 @@ article {
 		margin-right: 1%;
 	}
 	
-	.page-footer::before {
+	/*.page-footer::before {
 		left: 25%;
-	}
+	}*/
 	
 	.page-footer::after {
 		left: 55%;
 	}
 }
 
+@media only screen and (max-width: 630px) {
+	body {
+		min-width: 320px;
+	}
+	
+	* .content-block,
+	* article {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	* .content-left,
+	* .content-right,
+	.preview .content-left,
+	.backup .content-right,
+	.supported-storage .content-left,
+	.supported-storage .content-right,
+	.page-footer .resources {
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+	
+	* a,
+	.preview .content-right a {
+		margin-top: 10px;
+	}
+	
+	* .img {
+		min-width: 100%;
+	}
+	
+	* figure,
+	.backup figure {
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.page-navigation li,
+	.page-navigation li:last-child {
+		float: left;
+		padding: 5px;
+		padding-left: 0;
+		padding-right: 0;
+		min-height: 40px;
+	}
+	
+	.page-navigation li a,
+	.page-navigation li:last-child a {
+		margin-top: 0;
+	}
+	
+	.page-header,
+	.page-header .container {
+		background-image: url();
+	}	
+	
+	/*.page-footer section,
+	.page-footer .resources {
+		float: left;
+	}*/
+	
+	.quick-download-block .content-right {
+		width: 100%;
+	}
+}
